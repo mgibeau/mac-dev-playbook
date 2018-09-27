@@ -33,7 +33,7 @@ homebrew_cask_apps:
   - gitter
   - google-chrome
   - gpg-keychain
-  - iterm
+  - iterm2
   - keylord
   - mattermost
   - postman
