@@ -5,6 +5,12 @@
   vars_files:
     - config.yml
 
+  vars_prompt:
+    - name: "mas_email"
+      prompt: "App Store email"
+    - name: "mas_password"
+      prompt: "App Store password"
+
   roles:
     - role: geerlingguy.homebrew
       tags: ['homebrew']

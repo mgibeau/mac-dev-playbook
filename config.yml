@@ -59,8 +59,6 @@ mas_installed_apps:
     name: "The Unarchiver (4.0.0)"
   - id: 1147396723
     name: "WhatsApp (0.3.419)"
-mas_email: ""
-mas_password: ""
 
 # MacOS QOL tweaks
 macos_motd: "Welcome to a brave new world"
