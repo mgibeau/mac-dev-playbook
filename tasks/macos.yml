@@ -3,18 +3,20 @@
   shell: "defaults read /Library/Preferences/com.apple.loginwindow LoginwindowText"
   register: macos_current_motd
   changed_when: false
+  ignore_errors: true
 
 - name: "Change login screen MOTD to `{{ macos_motd }}`"
-  shell: "defaults write /Library/Preferences/com.apple.loginwindow LoginwindowText {{ macos_motd }}"
+  shell: "defaults write /Library/Preferences/com.apple.loginwindow LoginwindowText \"{{ macos_motd }}\""
   when: macos_current_motd.stdout != macos_motd
 
 - name: Get AppleInterfaceStyle
   shell: "defaults read 'Apple Global Domain' AppleInterfaceStyle"
   register: macos_current_style
   changed_when: false
+  ignore_errors: true
 
 - name: "Change AppleInterfaceStyle to `{{ macos_style }}`"
-  shell: "defaults write 'Apple Global Domain' AppleInterfaceStyle {{ macos_style }}"
+  shell: "defaults write 'Apple Global Domain' AppleInterfaceStyle \"{{ macos_style }}\""
   when: macos_current_style.stdout != macos_style
 
 # Hot corners
