@@ -1,0 +1,22 @@
+{
+    "workbench.iconTheme": "vs-seti",
+    "atomKeymap.promptV3Features": true,
+    "editor.multiCursorModifier": "ctrlCmd",
+    "editor.formatOnPaste": true,
+    "editor.rulers": [
+        80,
+        120
+    ],
+    "window.zoomLevel": -1,
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "todo-tree.defaultHighlight": {
+        "foreground": "green",
+        "type": "none"
+    },
+    "todo-tree.customHighlight": {
+        "TODO": {},
+        "FIXME": {}
+    },
+    "breadcrumbs.enabled": true,
+    "workbench.statusBar.feedback.visible": false
+}

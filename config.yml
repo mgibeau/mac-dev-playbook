@@ -1,0 +1,122 @@
+---
+workspace_dir: ~/workspace
+
+homebrew_installed_packages:
+  - awscli
+  - certbot
+  - direnv
+  - dockutil
+  - git
+  - gnupg
+  - go
+  - kops
+  - kubernetes-cli
+  - mas
+  - nmap
+  - node
+  - pipenv
+  - python
+  - redis
+  - terraform
+  - wget
+  - wrk
+
+homebrew_taps:
+  - homebrew/core
+  - homebrew/cask
+
+homebrew_cask_appdir: /Applications
+homebrew_cask_apps:
+  - atom
+  - docker
+  - firefox
+  - gitter
+  - google-chrome
+  - gpg-keychain
+  - iterm
+  - keylord
+  - mattermost
+  - postman
+  - private-eye
+  - sequel-pro
+  - sourcetree
+  - visual-studio-code
+  - whatsapp
+
+# See `geerlingguy.mas` role documentation for usage instructions.
+mas_installed_apps:
+  - id: 1295203466
+    name: "Microsoft Remote Desktop (10.2.1)"
+  - id: 726099620
+    name: "Bee (2.4.12)"
+  - id: 497799835
+    name: "Xcode (10.0)"
+  - id: 409183694
+    name: "Keynote (8.2)"
+  - id: 803453959
+    name: "Slack (3.3.2)"
+  - id: 425424353
+    name: "The Unarchiver (4.0.0)"
+  - id: 1147396723
+    name: "WhatsApp (0.3.419)"
+mas_email: ""
+mas_password: ""
+
+# MacOS QOL tweaks
+macos_motd: "Welcome to a brave new world"
+macos_style: Dark
+
+# Setup Dock
+dockitems_to_remove:
+  - Launchpad
+  - Safari
+  - Contacts
+  - Maps
+  - Photos
+  - Messages
+  - FaceTime
+  - iTunes
+  - iBooks
+  - App Store
+  - System Preferences
+
+dockitems_to_persist:
+  - name: iTerm
+    path: /Applications/iTerm.app
+    pos: 3
+  - name: "Google Chrome"
+    path: "/Applications/Google Chrome.app"
+    pos: 4
+  - name: Slack
+    path: /Applications/Slack.app
+    pos: 5
+  - name: Mattermost
+    path: /Applications/Mattermost.app
+    pos: 6
+  - name: Gitter
+    path: /Applications/Gitter.app
+    pos: 7
+  - name: WhatsApp
+    path: /Applications/WhatsApp.app
+    pos: 8
+  - name: Atom
+    path: /Applications/Atom.app
+    pos: 9
+  - name: "Visual Studio Code"
+    path: "/Applications/Visual Studio Code.app"
+    pos: 10
+
+# Git repositores to clone
+git_repositories: []
+
+vscode_extensions:
+  - EditorConfig.EditorConfig
+  - eg2.tslint
+  - Gruntfuggly.todo-tree
+  - mauve.terraform
+  - mikestead.dotenv
+  - ms-python.python
+  - ms-vscode.atom-keybindings
+  - PeterJausovec.vscode-docker
+  - vscoss.vscode-ansible
+  - waderyan.gitblame

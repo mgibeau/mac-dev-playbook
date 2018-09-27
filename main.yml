@@ -1,0 +1,32 @@
+---
+- hosts: all
+  connection: local
+
+  vars_files:
+    - config.yml
+
+  roles:
+    - role: geerlingguy.homebrew
+      tags: ['homebrew']
+    - role: geerlingguy.mas
+      when: mas_installed_apps
+      tags: ['mas']
+
+  tasks:
+    - include_tasks: tasks/dockitems.yml
+      tags: ['macos']
+
+    - include_tasks: tasks/macos.yml
+      tags: ['macos']
+
+    - include_tasks: tasks/workspace.yml
+      tags: ['dev']
+
+    - include_tasks: tasks/iterm.yml
+      tags: ['dev']
+
+    - include_tasks: tasks/vscode.yml
+      tags: ['dev']
+
+    - include_tasks: tasks/git-repos.yml
+      tags: ['dev']

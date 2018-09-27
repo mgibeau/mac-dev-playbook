@@ -1,0 +1,39 @@
+---
+- name: Get existing MOTD
+  shell: "defaults read /Library/Preferences/com.apple.loginwindow LoginwindowText"
+  register: macos_current_motd
+  changed_when: false
+
+- name: "Change login screen MOTD to `{{ macos_motd }}`"
+  shell: "defaults write /Library/Preferences/com.apple.loginwindow LoginwindowText {{ macos_motd }}"
+  when: macos_current_motd.stdout != macos_motd
+
+- name: Get AppleInterfaceStyle
+  shell: "defaults read 'Apple Global Domain' AppleInterfaceStyle"
+  register: macos_current_style
+  changed_when: false
+
+- name: "Change AppleInterfaceStyle to `{{ macos_style }}`"
+  shell: "defaults write 'Apple Global Domain' AppleInterfaceStyle {{ macos_style }}"
+  when: macos_current_style.stdout != macos_style
+
+# Hot corners
+  # Possible values:
+  #  0: no-op
+  #  2: Mission Control
+  #  3: Show application windows
+  #  4: Desktop
+  #  5: Start screen saver
+  #  6: Disable screen saver
+  #  7: Dashboard
+  # 10: Put display to sleep
+  # 11: Launchpad
+  # 12: Notification Center
+- name: Setup bottom-right hot corner → Screen saver
+  shell: defaults write com.apple.dock wvous-br-corner -int 5
+
+- name: Avoid creating .DS_Store files on network volumes
+  shell: defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
+
+- name: Show all filename extensions in Finder
+  shell: defaults write NSGlobalDomain AppleShowAllExtensions -bool true

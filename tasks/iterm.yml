@@ -1,0 +1,21 @@
+---
+- name: Download Inconsolata for Powerline
+  get_url:
+    url: https://github.com/powerline/fonts/blob/master/Inconsolata/Inconsolata%20for%20Powerline.otf?raw=true
+    dest: "~/Library/Fonts/Inconsolata for Powerline.otf"
+    mode: 0640
+    checksum: sha256:ee07f7241f5a7fed4a7916962bc5d64b8b8b3cfde588cfc69d9692738a2d48ae
+    validate_certs: false
+
+- name: Download Inconsolata-dz for Powerline
+  get_url:
+    url: https://github.com/powerline/fonts/blob/master/InconsolataDz/Inconsolata-dz%20for%20Powerline.otf?raw=true
+    dest: "~/Library/Fonts/Inconsolata-dz for Powerline.otf"
+    mode: 0640
+    checksum: sha256:3602d6478952d9462c1d9e3060464c0f3458972212c0d3fc4205d7a364b3e77a
+    validate_certs: false
+
+- name: Copy profile to iTerm
+  template:
+    src: ../files/iterm/profiles.json.j2
+    dest: ~/Library/Application Support/iTerm2/DynamicProfiles/profiles.json
