@@ -7,7 +7,15 @@ This will run a series of tasks on the local machine to setup a development envi
   1. Apple's command line tools (`xcode-select --install`).
   2. [Install Ansible](http://docs.ansible.com/intro_installation.html).
 
-## Usage
+## Installing
+
+### Install script
+
+```
+curl -o- https://raw.githubusercontent.com/mgibeau/mac-dev-playbook/master/install.sh | bash -x
+```
+
+### Manual install
 
 ```shell
 $ ansible-galaxy install -r requirements.yml

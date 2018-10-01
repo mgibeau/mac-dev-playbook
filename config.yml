@@ -4,6 +4,7 @@ workspace_dir: ~/workspace
 homebrew_installed_packages:
   - awscli
   - certbot
+  - dep
   - direnv
   - dockutil
   - git
@@ -15,9 +16,11 @@ homebrew_installed_packages:
   - nmap
   - node
   - pipenv
+  - pinentry-mac
   - python
   - redis
   - terraform
+  - travis
   - wget
   - wrk
 
@@ -77,6 +80,9 @@ dockitems_to_remove:
   - iBooks
   - App Store
   - System Preferences
+  - Pages
+  - Numbers
+  - Keynote
 
 dockitems_to_persist:
   - name: iTerm
@@ -115,6 +121,7 @@ vscode_extensions:
   - mikestead.dotenv
   - ms-python.python
   - ms-vscode.atom-keybindings
+  - ms-vscode.Go
   - PeterJausovec.vscode-docker
   - vscoss.vscode-ansible
   - waderyan.gitblame

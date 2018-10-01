@@ -19,20 +19,20 @@
       tags: ['mas']
 
   tasks:
-    - include_tasks: tasks/dockitems.yml
+    - import_tasks: tasks/dockitems.yml
       tags: ['macos']
 
-    - include_tasks: tasks/macos.yml
+    - import_tasks: tasks/macos.yml
       tags: ['macos']
 
-    - include_tasks: tasks/workspace.yml
+    - import_tasks: tasks/workspace.yml
       tags: ['dev']
 
-    - include_tasks: tasks/iterm.yml
+    - import_tasks: tasks/iterm.yml
       tags: ['dev']
 
-    - include_tasks: tasks/vscode.yml
+    - import_tasks: tasks/vscode.yml
       tags: ['dev']
 
-    - include_tasks: tasks/git-repos.yml
+    - import_tasks: tasks/git-repos.yml
       tags: ['dev']

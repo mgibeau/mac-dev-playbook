@@ -1,4 +1,9 @@
 ---
+- name: Ensure `/Code/User/` directory exists
+  file:
+    path: "~/Library/Application Support/Code/User/"
+    state: directory
+
 - name: Copy user settings
   copy:
     src: ../files/vscode/settings.json

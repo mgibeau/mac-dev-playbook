@@ -15,7 +15,12 @@
     checksum: sha256:3602d6478952d9462c1d9e3060464c0f3458972212c0d3fc4205d7a364b3e77a
     validate_certs: false
 
+- name: Ensure `DynamicProfiles` directory exists
+  file:
+    path: "~/Library/Application Support/iTerm2/DynamicProfiles/"
+    state: directory
+
 - name: Copy profile to iTerm
   template:
     src: ../files/iterm/profiles.json.j2
-    dest: ~/Library/Application Support/iTerm2/DynamicProfiles/profiles.json
+    dest: "~/Library/Application Support/iTerm2/DynamicProfiles/profiles.json"
