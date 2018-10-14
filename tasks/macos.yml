@@ -19,6 +19,9 @@
   shell: "defaults write 'Apple Global Domain' AppleInterfaceStyle \"{{ macos_style }}\""
   when: macos_current_style.stdout != macos_style
 
+- name: "Enable right click on Apple Magic Mouse"
+  shell: "defaults write com.apple.driver.AppleBluetoothMultitouch.mouse MouseButtonMode TwoButton"
+
 # Hot corners
   # Possible values:
   #  0: no-op
