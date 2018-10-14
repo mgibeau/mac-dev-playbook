@@ -14,7 +14,7 @@ homebrew_installed_packages:
   - kubernetes-cli
   - mas
   - nmap
-  - node
+  - node@8
   - pipenv
   - pinentry-mac
   - python
@@ -23,6 +23,7 @@ homebrew_installed_packages:
   - travis
   - wget
   - wrk
+  - yarn
 
 homebrew_taps:
   - homebrew/core
