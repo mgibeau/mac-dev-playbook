@@ -52,10 +52,6 @@ homebrew_cask_apps:
 mas_installed_apps:
   - id: 1295203466
     name: "Microsoft Remote Desktop (10.2.1)"
-  - id: 726099620
-    name: "Bee (2.4.12)"
-  - id: 497799835
-    name: "Xcode (10.0)"
   - id: 409183694
     name: "Keynote (8.2)"
   - id: 803453959
