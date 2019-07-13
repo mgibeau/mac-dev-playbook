@@ -14,7 +14,7 @@ sudo pip install ansible
 # Grab latest playbook and unzip
 curl -LO https://github.com/mgibeau/mac-dev-playbook/archive/master.zip
 rm -rf "$ANSIBLE_DIR"
-unzip master.zip
+unzip master.zip -d "$ANSIBLE_DIR"
 rm master.zip
 cd "$ANSIBLE_DIR"
 
