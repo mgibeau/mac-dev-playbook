@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-INSTALLER_ROOT="$HOME/.mac-dev/"
+INSTALLER_ROOT="$HOME/.mac-dev"
 ANSIBLE_DIR="$INSTALLER_ROOT/mac-dev-playbook"
 
 set -e;
